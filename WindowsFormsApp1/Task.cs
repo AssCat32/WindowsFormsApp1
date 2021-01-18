@@ -24,6 +24,7 @@ namespace WindowsFormsApp1
             }
         }
         public string Name { get => "Task " + size; }
+        public int Size { get => size; }
         public Task(int N)
         {
             Random rand = new Random();
@@ -37,7 +38,20 @@ namespace WindowsFormsApp1
                 array[i] = rand.Next(1, 10);
             }
         }
-
+        public string ChetSum(int N, int[] arr)
+        {
+            string str = "";
+            int sum = 0;
+            for (int i = 0; i < N; ++i)
+            {
+                if ((arr[i] > 0) && (arr[i] % 2 == 0))
+                {
+                    sum++;
+                }
+            }
+            str += sum;
+            return str;
+        }
         public string ChetSum(int N)
         {
             string str = "";

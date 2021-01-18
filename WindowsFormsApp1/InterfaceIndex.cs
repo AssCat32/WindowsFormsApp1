@@ -13,9 +13,15 @@ namespace WindowsFormsApp1
             get;
             set;
         }
-        string Name { 
+        string Name 
+        { 
             get; 
         }
+        int Size
+        {
+            get;
+        }
+        
         string ChetSum(int N);
         string ChetSum();
     }

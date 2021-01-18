@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -134,6 +135,46 @@ namespace WindowsFormsApp1
         private void EventSecond_Click(object sender, EventArgs e)
         {
             richTextBox.Text += event2?.Invoke() + "\n";
+        }
+
+        private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                if (SaveData(saveFileDialog1.FileName))
+                {
+                    MessageBox.Show("Сохранение прошло успешно", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Не сохранилось", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private bool SaveData(string filename)
+        {
+            if (File.Exists(filename))
+            {
+                File.Delete(filename);
+            }
+            using (StreamWriter sw = new StreamWriter(filename))
+            {
+                foreach (var item in listBox)
+                {
+                    size = item.Size;
+
+                    if (item.GetType().Name == "Task")
+                    {
+                        sw.WriteLine("Task: " + PrintArray(item) + "." + item.ChetSum(size) + "." + item.ChetSum());
+                    }
+                    if (item.GetType().Name == "SecondTask")
+                    {
+                        sw.WriteLine("SecondTask: "+ PrintArray(item) + "." + item.ChetSum(size) + "." + item.ChetSum());
+                    }
+                }
+            }
+            return true;
         }
     }
 }

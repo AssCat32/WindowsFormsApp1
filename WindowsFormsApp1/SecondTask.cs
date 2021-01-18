@@ -23,6 +23,7 @@ namespace WindowsFormsApp1
             }
         }
         public string Name { get => "SecondTask " + size; }
+        public int Size { get => size; }
         public SecondTask(int N)
         {
             Random rand = new Random();
