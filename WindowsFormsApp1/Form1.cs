@@ -27,16 +27,25 @@ namespace WindowsFormsApp1
         private void ChetSumButton_Click(object sender, EventArgs e)
         {
             int size = Convert.ToInt32(ReadtextBox.Text);
-            OutputtextBox.Text = task.ChetSum(size);
-            ArraytextBox.Text = task.PrintArray(size);
-
+            if (size >= 10)
+            {
+                OutputtextBox.Text = task.ChetSum(size);
+                ArraytextBox.Text = task.PrintArray(size);
+            }
         }
 
         private void NeChetbutton_Click(object sender, EventArgs e)
         {
             int size = Convert.ToInt32(ReadtextBox.Text);
-            OutputtextBox.Text = task.NeChetSum(size);
-            ArraytextBox.Text = task.PrintArray(size);
+            if (size >= 10)
+            {
+                OutputtextBox.Text = task.NeChetSum(size);
+                ArraytextBox.Text = task.PrintArray(size);
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }
