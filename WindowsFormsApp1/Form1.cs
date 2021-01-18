@@ -15,6 +15,8 @@ namespace WindowsFormsApp1
         int size;
         int sizeList;
         List<InterfaceIndex> listBox;
+        public event myDelegate event1;
+        public event myDelegate2 event2;
 
         Random rand = new Random();
         public Form1()
@@ -41,7 +43,7 @@ namespace WindowsFormsApp1
         Task task1;
         SecondTask task2;
         private void Createbutton_Click(object sender, EventArgs e)
-        { 
+        {
             if (Convert.ToInt32(ReadtextBox.Text) < 10)
             {
                 size = rand.Next(10, 20);
@@ -56,7 +58,7 @@ namespace WindowsFormsApp1
         }
 
         private void ChetSumButton_Click(object sender, EventArgs e)
-        { 
+        {
             OutputtextBox.Text = task1.ChetSum(ArraytextBox.Text.Length);
             ArraytextBox.Text = PrintArray(task1);
         }
@@ -102,6 +104,36 @@ namespace WindowsFormsApp1
         {
             OutputtextBox.Text = task2.ChetSum();
             ArraytextBox.Text = PrintArray(task2);
+        }
+
+        private void InsertFirstM_Click(object sender, EventArgs e)
+        {
+            event1 += listBox.ElementAt(listBoxClasses.SelectedIndex).ChetSum;
+        }
+
+        private void DeleteFirstM_Click(object sender, EventArgs e)
+        {
+            event1 -= listBox.ElementAt(listBoxClasses.SelectedIndex).ChetSum;
+        }
+
+        private void InsertSecondM_Click(object sender, EventArgs e)
+        {
+            event2 += listBox.ElementAt(listBoxClasses.SelectedIndex).ChetSum;
+        }
+
+        private void DeleteSecondM_Click(object sender, EventArgs e)
+        {
+            event2 -= listBox.ElementAt(listBoxClasses.SelectedIndex).ChetSum;
+        }
+
+        private void EventFirst_Click(object sender, EventArgs e)
+        {
+            richTextBox.Text += event1?.Invoke(Convert.ToInt32(ReadtextBox.Text)) + "\n";
+        }
+
+        private void EventSecond_Click(object sender, EventArgs e)
+        {
+            richTextBox.Text += event2?.Invoke() + "\n";
         }
     }
 }
