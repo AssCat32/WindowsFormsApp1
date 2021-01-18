@@ -20,33 +20,20 @@ namespace WindowsFormsApp1
         Task task;
         private void Createbutton_Click(object sender, EventArgs e)
         {
-            task = new Task();
-
+            task = new Task(Convert.ToInt32(ReadtextBox.Text));
+            ArraytextBox.Text = task.PrintArray();
         }
 
         private void ChetSumButton_Click(object sender, EventArgs e)
-        {
-            int size = Convert.ToInt32(ReadtextBox.Text);
-            if (size >= 10)
-            {
-                OutputtextBox.Text = task.ChetSum(size);
-                ArraytextBox.Text = task.PrintArray(size);
-            }
+        { 
+            OutputtextBox.Text = task.ChetSum(ArraytextBox.Text.Length);
+            ArraytextBox.Text = task.PrintArray();
         }
 
         private void NeChetbutton_Click(object sender, EventArgs e)
         {
-            int size = Convert.ToInt32(ReadtextBox.Text);
-            if (size >= 10)
-            {
-                OutputtextBox.Text = task.NeChetSum(size);
-                ArraytextBox.Text = task.PrintArray(size);
-            }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            OutputtextBox.Text = task.ChetSum();
+            ArraytextBox.Text = task.PrintArray();
         }
     }
 }
