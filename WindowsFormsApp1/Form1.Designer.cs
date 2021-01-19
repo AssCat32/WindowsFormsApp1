@@ -43,6 +43,7 @@ namespace WindowsFormsApp1
             this.NeChetbuttonList = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.listBoxClasses = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // Createbutton
@@ -180,6 +181,14 @@ namespace WindowsFormsApp1
             this.label5.TabIndex = 10;
             this.label5.Text = "SecondTask:";
             // 
+            // listBoxClasses
+            // 
+            this.listBoxClasses.FormattingEnabled = true;
+            this.listBoxClasses.Location = new System.Drawing.Point(280, 11);
+            this.listBoxClasses.Name = "listBoxClasses";
+            this.listBoxClasses.Size = new System.Drawing.Size(131, 264);
+            this.listBoxClasses.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,6 +202,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.ArraytextBox);
             this.Controls.Add(this.NeChetbutton);
             this.Controls.Add(this.OutputtextBox);
+            this.Controls.Add(this.listBoxClasses);
             this.Controls.Add(this.NeChetbuttonList);
             this.Controls.Add(this.ChetbuttonList);
             this.Controls.Add(this.CreatebuttonList);
@@ -222,6 +232,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button NeChetbuttonList;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ListBox listBoxClasses;
     }
 }
 

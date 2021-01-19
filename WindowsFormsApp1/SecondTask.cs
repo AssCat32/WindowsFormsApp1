@@ -10,7 +10,7 @@ namespace WindowsFormsApp1
     {
         private List<int> list;
         private int size = 0;
-        Task task;
+        
         public int this[int index]
         {
             get
@@ -22,6 +22,7 @@ namespace WindowsFormsApp1
                 list[index] = value;
             }
         }
+        public string Name { get => "SecondTask " + size; }
         public SecondTask(int N)
         {
             Random rand = new Random();
@@ -62,6 +63,10 @@ namespace WindowsFormsApp1
             }
             str += sum;
             return str;
+        }
+        public override string ToString()
+        {
+            return Name;
         }
     }
 }
