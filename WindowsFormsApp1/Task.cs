@@ -10,7 +10,8 @@ namespace WindowsFormsApp1
     {
         private int[] array;
         private int size = 0;
-
+        public event myDelegate event1;
+        public event myDelegate2 event2;
         public int this[int index]
         {
             get
