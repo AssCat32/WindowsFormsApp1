@@ -6,43 +6,41 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-    public class Task: InterfaceIndex
+    class SecondTask : InterfaceIndex
     {
-        private int[] array;
+        private List<int> list;
         private int size = 0;
-
+        Task task;
         public int this[int index]
         {
             get
             {
-                return array[index];
+                return list[index];
             }
             set
             {
-                array[index] = value;
+                list[index] = value;
             }
         }
-        public Task(int N)
+        public SecondTask(int N)
         {
             Random rand = new Random();
 
             size = N;
 
-            array = new int[size];
-
-            for (int i = 0; i < size; ++i)
+            list = new List<int> { };
+            for (int i = 0; i < N; ++i)
             {
-                array[i] = rand.Next(1, 10);
+                list.Add(rand.Next(1, 10));
             }
         }
-
         public string ChetSum(int N)
         {
             string str = "";
             int sum = 0;
             for (int i = 0; i < N; ++i)
             {
-                if ((array[i] > 0) && (array[i] % 2 == 0))
+                if ((list[i] > 0) && (list[i] % 2 == 0))
                 {
                     sum++;
                 }
@@ -50,14 +48,14 @@ namespace WindowsFormsApp1
             str += sum;
             return str;
         }
-
+        //NeChet
         public string ChetSum()
         {
             string str = "";
             int sum = 0;
             for (int i = 0; i < size; ++i)
             {
-                if (((array[i] > 0) && (array[i] % 2 != 0)) || array[i] == 1)
+                if (((list[i] > 0) && (list[i] % 2 != 0)) || list[i] == 1)
                 {
                     sum++;
                 }
