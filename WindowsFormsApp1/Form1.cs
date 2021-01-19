@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -214,6 +215,20 @@ namespace WindowsFormsApp1
                 }
             }
             return true;
+        }
+
+
+        private void buttonSort_Click(object sender, EventArgs e)
+        {
+            listBox.Sort(new MyComparer());
+            listBoxClasses.Items.Clear();
+
+            foreach (var item in listBox)
+            {
+                listBoxClasses.Items.Add(item);
+            }
+                
+            logger.Info("Сортировка списка");
         }
     }
 }
