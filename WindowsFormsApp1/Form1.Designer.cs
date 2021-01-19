@@ -51,11 +51,15 @@ namespace WindowsFormsApp1
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.listBoxClasses = new System.Windows.Forms.ListBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Createbutton
             // 
-            this.Createbutton.Location = new System.Drawing.Point(0, 121);
+            this.Createbutton.Location = new System.Drawing.Point(0, 145);
             this.Createbutton.Name = "Createbutton";
             this.Createbutton.Size = new System.Drawing.Size(125, 52);
             this.Createbutton.TabIndex = 0;
@@ -65,14 +69,14 @@ namespace WindowsFormsApp1
             // 
             // ReadtextBox
             // 
-            this.ReadtextBox.Location = new System.Drawing.Point(68, 11);
+            this.ReadtextBox.Location = new System.Drawing.Point(68, 35);
             this.ReadtextBox.Name = "ReadtextBox";
             this.ReadtextBox.Size = new System.Drawing.Size(160, 20);
             this.ReadtextBox.TabIndex = 1;
             // 
             // ChetSumButton
             // 
-            this.ChetSumButton.Location = new System.Drawing.Point(131, 121);
+            this.ChetSumButton.Location = new System.Drawing.Point(131, 145);
             this.ChetSumButton.Name = "ChetSumButton";
             this.ChetSumButton.Size = new System.Drawing.Size(75, 23);
             this.ChetSumButton.TabIndex = 2;
@@ -83,14 +87,14 @@ namespace WindowsFormsApp1
             // 
             // OutputtextBox
             // 
-            this.OutputtextBox.Location = new System.Drawing.Point(68, 65);
+            this.OutputtextBox.Location = new System.Drawing.Point(68, 89);
             this.OutputtextBox.Name = "OutputtextBox";
             this.OutputtextBox.Size = new System.Drawing.Size(160, 20);
             this.OutputtextBox.TabIndex = 3;
             // 
             // NeChetbutton
             // 
-            this.NeChetbutton.Location = new System.Drawing.Point(131, 150);
+            this.NeChetbutton.Location = new System.Drawing.Point(131, 174);
             this.NeChetbutton.Name = "NeChetbutton";
             this.NeChetbutton.Size = new System.Drawing.Size(75, 23);
             this.NeChetbutton.TabIndex = 4;
@@ -101,7 +105,7 @@ namespace WindowsFormsApp1
             // 
             // ArraytextBox
             // 
-            this.ArraytextBox.Location = new System.Drawing.Point(68, 37);
+            this.ArraytextBox.Location = new System.Drawing.Point(68, 61);
             this.ArraytextBox.Name = "ArraytextBox";
             this.ArraytextBox.Size = new System.Drawing.Size(160, 20);
             this.ArraytextBox.TabIndex = 5;
@@ -110,7 +114,7 @@ namespace WindowsFormsApp1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(38, 9);
+            this.label1.Location = new System.Drawing.Point(38, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(24, 20);
             this.label1.TabIndex = 6;
@@ -120,7 +124,7 @@ namespace WindowsFormsApp1
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(12, 35);
+            this.label2.Location = new System.Drawing.Point(12, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 20);
             this.label2.TabIndex = 7;
@@ -130,7 +134,7 @@ namespace WindowsFormsApp1
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(16, 63);
+            this.label3.Location = new System.Drawing.Point(16, 87);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 20);
             this.label3.TabIndex = 8;
@@ -138,7 +142,7 @@ namespace WindowsFormsApp1
             // 
             // CreatebuttonList
             // 
-            this.CreatebuttonList.Location = new System.Drawing.Point(0, 203);
+            this.CreatebuttonList.Location = new System.Drawing.Point(0, 227);
             this.CreatebuttonList.Name = "CreatebuttonList";
             this.CreatebuttonList.Size = new System.Drawing.Size(125, 52);
             this.CreatebuttonList.TabIndex = 6;
@@ -148,7 +152,7 @@ namespace WindowsFormsApp1
             // 
             // ChetbuttonList
             // 
-            this.ChetbuttonList.Location = new System.Drawing.Point(131, 203);
+            this.ChetbuttonList.Location = new System.Drawing.Point(131, 227);
             this.ChetbuttonList.Name = "ChetbuttonList";
             this.ChetbuttonList.Size = new System.Drawing.Size(104, 23);
             this.ChetbuttonList.TabIndex = 7;
@@ -159,7 +163,7 @@ namespace WindowsFormsApp1
             // 
             // NeChetbuttonList
             // 
-            this.NeChetbuttonList.Location = new System.Drawing.Point(131, 232);
+            this.NeChetbuttonList.Location = new System.Drawing.Point(131, 256);
             this.NeChetbuttonList.Name = "NeChetbuttonList";
             this.NeChetbuttonList.Size = new System.Drawing.Size(104, 23);
             this.NeChetbuttonList.TabIndex = 8;
@@ -170,7 +174,7 @@ namespace WindowsFormsApp1
             // 
             // richTextBox
             // 
-            this.richTextBox.Location = new System.Drawing.Point(378, 11);
+            this.richTextBox.Location = new System.Drawing.Point(378, 35);
             this.richTextBox.Name = "richTextBox";
             this.richTextBox.Size = new System.Drawing.Size(313, 305);
             this.richTextBox.TabIndex = 10;
@@ -178,7 +182,7 @@ namespace WindowsFormsApp1
             // 
             // InsertFirstM
             // 
-            this.InsertFirstM.Location = new System.Drawing.Point(391, 319);
+            this.InsertFirstM.Location = new System.Drawing.Point(391, 343);
             this.InsertFirstM.Name = "InsertFirstM";
             this.InsertFirstM.Size = new System.Drawing.Size(75, 23);
             this.InsertFirstM.TabIndex = 17;
@@ -188,7 +192,7 @@ namespace WindowsFormsApp1
             // 
             // DeleteFirstM
             // 
-            this.DeleteFirstM.Location = new System.Drawing.Point(391, 348);
+            this.DeleteFirstM.Location = new System.Drawing.Point(391, 372);
             this.DeleteFirstM.Name = "DeleteFirstM";
             this.DeleteFirstM.Size = new System.Drawing.Size(75, 23);
             this.DeleteFirstM.TabIndex = 18;
@@ -198,7 +202,7 @@ namespace WindowsFormsApp1
             // 
             // InsertSecondM
             // 
-            this.InsertSecondM.Location = new System.Drawing.Point(483, 319);
+            this.InsertSecondM.Location = new System.Drawing.Point(483, 343);
             this.InsertSecondM.Name = "InsertSecondM";
             this.InsertSecondM.Size = new System.Drawing.Size(91, 23);
             this.InsertSecondM.TabIndex = 19;
@@ -208,7 +212,7 @@ namespace WindowsFormsApp1
             // 
             // DeleteSecondM
             // 
-            this.DeleteSecondM.Location = new System.Drawing.Point(483, 348);
+            this.DeleteSecondM.Location = new System.Drawing.Point(483, 372);
             this.DeleteSecondM.Name = "DeleteSecondM";
             this.DeleteSecondM.Size = new System.Drawing.Size(91, 23);
             this.DeleteSecondM.TabIndex = 20;
@@ -218,7 +222,7 @@ namespace WindowsFormsApp1
             // 
             // EventFirst
             // 
-            this.EventFirst.Location = new System.Drawing.Point(594, 319);
+            this.EventFirst.Location = new System.Drawing.Point(594, 343);
             this.EventFirst.Name = "EventFirst";
             this.EventFirst.Size = new System.Drawing.Size(91, 23);
             this.EventFirst.TabIndex = 21;
@@ -228,7 +232,7 @@ namespace WindowsFormsApp1
             // 
             // EventSecond
             // 
-            this.EventSecond.Location = new System.Drawing.Point(594, 348);
+            this.EventSecond.Location = new System.Drawing.Point(594, 372);
             this.EventSecond.Name = "EventSecond";
             this.EventSecond.Size = new System.Drawing.Size(91, 23);
             this.EventSecond.TabIndex = 22;
@@ -240,7 +244,7 @@ namespace WindowsFormsApp1
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(12, 98);
+            this.label4.Location = new System.Drawing.Point(12, 122);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 20);
             this.label4.TabIndex = 9;
@@ -250,7 +254,7 @@ namespace WindowsFormsApp1
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(12, 180);
+            this.label5.Location = new System.Drawing.Point(12, 204);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(113, 20);
             this.label5.TabIndex = 10;
@@ -259,10 +263,31 @@ namespace WindowsFormsApp1
             // listBoxClasses
             // 
             this.listBoxClasses.FormattingEnabled = true;
-            this.listBoxClasses.Location = new System.Drawing.Point(241, 9);
+            this.listBoxClasses.Location = new System.Drawing.Point(241, 35);
             this.listBoxClasses.Name = "listBoxClasses";
             this.listBoxClasses.Size = new System.Drawing.Size(131, 264);
             this.listBoxClasses.TabIndex = 9;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.сохранитьToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 23;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // сохранитьToolStripMenuItem
+            // 
+            this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.сохранитьToolStripMenuItem.Text = "Сохранить";
+            this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.сохранитьToolStripMenuItem_Click);
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.Filter = "txt file | *.txt";
             // 
             // Form1
             // 
@@ -291,8 +316,12 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.ChetSumButton);
             this.Controls.Add(this.ReadtextBox);
             this.Controls.Add(this.Createbutton);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -322,6 +351,9 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button DeleteSecondM;
         private System.Windows.Forms.Button EventFirst;
         private System.Windows.Forms.Button EventSecond;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem сохранитьToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 
