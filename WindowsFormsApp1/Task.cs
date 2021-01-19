@@ -16,7 +16,15 @@ namespace WindowsFormsApp1
         {
             get
             {
-                return array[index];
+                try
+                {
+                    return array[index];
+                }
+                catch (IndexOutOfRangeException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    return 0;
+                } 
             }
             set
             {
